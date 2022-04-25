@@ -123,4 +123,25 @@ Promise.race([getp1(),getp2(),getp3()]).then((data)=>{console.log(data)})
 ```
 
 ### ES7提出的异步方案---async 函数
+async表示函数里有异步操作，await表示紧跟在后面的表达式需要等待结果。异步的代码，同步的写法。逻辑更加清晰。
+
+```
+function getData(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            var name = "syy";
+            resolve(name)
+        },3000)
+    })
+}
+// async await 异步方案
+async function test(){
+    var p = await getData();
+    console.log(p);
+};
+test(); //syy
+
+// Promise 异步方案
+p1 = getData().then((data)=>{console.log(data)}) //syy
+```
 
