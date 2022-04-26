@@ -56,10 +56,12 @@ Function.prototype._apply = function(context, arr) {
 ### bind的实现
 
 ```
-Function.prototype._bind=function(context, ...args){
+Function.prototype._bind=function(context, ...args1){
     const fn = this; // 这里的 this 就是调用 bind 的函数 func
-    return function () {
-      return fn.call(context, ...args);
+    
+    return function (...args2) {
+        console.log('arr1:',[...args1,...args2])
+      return fn.apply(context, [...args1,...args2]);
     };
 };
 ```
