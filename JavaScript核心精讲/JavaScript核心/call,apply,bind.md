@@ -1,5 +1,5 @@
 ## JavaScript的继承
-JavaScript是父类的，那如何让不同的实例对象共享方法并且传递参数？
+ES5中JavaScript是没有父类的，那如何让不同的实例对象共享方法并且传递参数？
 
 它可以通过call，apply，bind 实现类似的功能
 
