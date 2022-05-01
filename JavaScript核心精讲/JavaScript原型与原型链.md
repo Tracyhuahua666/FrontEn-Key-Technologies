@@ -4,6 +4,8 @@
 
 ### 什么是原型：
 每一个JavaScript对象(null除外)在通过构造函数创建一个对象的时候就会与之关联另一个对象（prototype）,prototype包含了这些对象的共同点，也就是我们所说的原型，每一个对象都会从原型"继承"属性。
+### 为什么要使用原型？
+原型对象的作用，是用来存放实例中共有的那部份属性、方法，可以大大减少内存消耗。
 ```
 function changshaStuent(name,university){
   this.name = name;
@@ -30,5 +32,7 @@ console.log(stuent1.constructor)//[Function: changshaStuent]
 ## 原型链：由相互关联的原型组成的链状结构就是原型链。
 实例对象可以通过__proto__属性找到它构造函数的原型，而构造函数也是它上一级实例函数创建出来的对象，通过这一特性，可以一直溯源下去找到每个构造函数的原型。
 ![图片](./picture/link.png)
+
+
 
 
