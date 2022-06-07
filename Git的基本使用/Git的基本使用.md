@@ -27,5 +27,8 @@ git checkout branchname
 (master) git pull
 (master) git merge dev
 (master) git push
+```
+### 冲突
+以vscode为例，先协商使用哪个版本，再修改提交
 
  
