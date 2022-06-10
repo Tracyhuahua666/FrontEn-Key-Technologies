@@ -36,6 +36,7 @@ function deepCopy(obj, map = new Map()) {
 }
 
 
+
 let obj = {
   a: undefined,
   b: {
@@ -46,7 +47,8 @@ let obj = {
     g: NaN,
     i: 'hello',
     j: true,
-    k: undefined
+    k: undefined,
+    l: Date()
   },
   h: [10, 20, 30, 40]
 }
@@ -55,7 +57,7 @@ obj.a = obj //添加循环引用
 
 //测试代码
 let obj_copy = deepCopy(obj)
-obj_copy.h.push(5)
-console.log('obj', obj)
-console.log('obj_copy', obj_copy)
+// obj_copy.h.push(5)
+// console.log('obj', obj)
+// console.log('obj_copy', obj_copy)
 
