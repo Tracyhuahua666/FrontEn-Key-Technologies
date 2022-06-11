@@ -5,10 +5,12 @@ console.log(arr2.join(''))
 let str1 = 'abc'
 console.log('str1:', str1.split('')) // [ 'a', 'b', 'c' ]
 console.log('str1:',[...str1])
-// 操作数组
-arr2.push('d')
-console.log('push',arr2)
-arr2.pop()
-console.log('pop:',arr2)
+// 操作数组尾部
+arr2.push('d') // ['a','b','c','d']
+arr2.pop() // ['a','b','c']
+
+//操作数组结尾
+arr1.push() 
+
+// 逆转数组
 arr3 = arr2.reverse()
-console.log('reverse:',arr3)
