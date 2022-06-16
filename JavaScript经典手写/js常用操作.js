@@ -22,3 +22,21 @@ console.log('arr2:',arr2)
 
 // 逆转数组
 arr3 = arr2.reverse()
+
+// 字符串逆转: 先拆分成数组，再逆转，再连接
+let str = 'abc'
+console.log(str.split('').reverse().join(''))
+let str2 = 'www.baidu.com'
+console.log(str2.split('.').reverse().join('.'))
+
+// 数组中是否包含某个元素 array.includes(X)
+console.log(arr2.includes('a'))
+
+// 数组中某个元素第一次出现的位置array.indexOf(X)
+console.log(arr2.indexOf('a'))
+
+//数组排列
+console.log(arr2.sort()) 
+
+// 数组求和
+console.log(sum([1,2]))

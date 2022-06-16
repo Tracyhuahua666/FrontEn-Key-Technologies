@@ -18,3 +18,4 @@ document.getElementById('searchInput').oninput = debounce(getData, 800)
 // 如果用户一直在输入，是不会发送请求
 // 只有用户连续输入时间间隔超过800ms之后才会请求一次数据，也就是用户在800ms内没有输入才会去请求数据
 
+

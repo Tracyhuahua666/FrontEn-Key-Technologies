@@ -48,7 +48,8 @@ let obj = {
     i: 'hello',
     j: true,
     k: undefined,
-    l: Date()
+    l: Date(),
+    m: function sum(a,b){a+b}
   },
   h: [10, 20, 30, 40]
 }
@@ -57,7 +58,7 @@ obj.a = obj //添加循环引用
 
 //测试代码
 let obj_copy = deepCopy(obj)
-// obj_copy.h.push(5)
-// console.log('obj', obj)
-// console.log('obj_copy', obj_copy)
+obj_copy.h.push(5)
+console.log('obj', obj)
+console.log('obj_copy', obj_copy)
 
