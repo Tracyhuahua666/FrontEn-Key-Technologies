@@ -18,23 +18,19 @@
 </html>
 <style>
     .father {
-        width: 800px;
+        display: flex;
+        width: 600px;
         height: 600px;
-        margin: 0 auto;
-        background-color: pink;
     }
 
     .left {
         width: 100px;
-        height: 100%;
-        float: left;
-        background-color: green;
+        background-color: pink;
     }
 
     .right {
-        height: 100%;
-        float: left;
-        width: calc(100% - 100px);
-        background-color: purple;
+        flex: 1;
+        /*占用完其它剩余空间*/
+        background-color: green;
     }
 </style>

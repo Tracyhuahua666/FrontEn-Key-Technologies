@@ -11,6 +11,7 @@
 <body>
     <div class="father">
         <div class="left"></div>
+        <div class="center"></div>
         <div class="right"></div>
     </div>
 </body>
@@ -18,23 +19,23 @@
 </html>
 <style>
     .father {
-        width: 800px;
+        width: 600px;
         height: 600px;
-        margin: 0 auto;
-        background-color: pink;
+        display: flex;
     }
 
     .left {
         width: 100px;
-        height: 100%;
-        float: left;
-        background-color: green;
+        background-color: brown;
     }
 
     .right {
-        height: 100%;
-        float: left;
-        width: calc(100% - 100px);
-        background-color: purple;
+        width: 100px;
+        background-color: green;
+    }
+
+    .center {
+        flex: 1;
+        background-color: pink;
     }
 </style>
