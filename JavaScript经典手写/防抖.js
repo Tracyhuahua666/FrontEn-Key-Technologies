@@ -19,3 +19,14 @@ document.getElementById('searchInput').oninput = debounce(getData, 800)
 // 只有用户连续输入时间间隔超过800ms之后才会请求一次数据，也就是用户在800ms内没有输入才会去请求数据
 
 
+
+
+// function debounce(fn,interval){
+//     let timeout = null
+//     return function(){
+//         clearTimeout(timeout)
+//         timeout = setTimeout(()=>{
+//             fn.apply(this,arguments)
+//         },interval)
+//     }
+// }

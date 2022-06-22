@@ -9,3 +9,4 @@ function throttle(fn,interval){
     }
 }
 
+

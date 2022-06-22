@@ -38,5 +38,26 @@ console.log(arr2.indexOf('a'))
 //数组排列
 console.log(arr2.sort()) 
 
-// 数组求和
-console.log(sum([1,2]))
+
+//循环
+let arr4 = [1,2,3,4]
+// 数组求和，reduce
+console.log(arr4.reduce((res,item)=>{
+    return res+item
+}))
+
+//遍历数组 map，forEach的区别
+
+//map 处理数据并返回一个新数组
+console.log('map:', arr4.map(item=>item*2)) 
+console.log('arr4:',arr4)
+//forEach 没有返回值
+console.log(arr4.forEach(item => item*2))
+
+
+arr4.forEach(function(item){
+    console.log(item)
+})
+
+//filter 过滤数据并返回一个新的数组
+console.log('filter', arr4.filter(item => item%2===0))
