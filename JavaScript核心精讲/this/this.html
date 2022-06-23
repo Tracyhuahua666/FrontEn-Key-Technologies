@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="func">click</button>
+</body>
+
+</html>
+<script>
+    // 这里有两个点击事件，一个绑定的事件处理函数为普通函数，一个为箭头函数
+    func = document.getElementById('func')
+    func.addEventListener("click", function () {
+        console.log(this); //<button id="func">click</button> 普通函数，谁调用，this就指向谁
+    });
+
+    func.addEventListener("click", () => {
+        console.log(this); //Window 箭头函数，指向它上一级对象
+    });
+</script>
