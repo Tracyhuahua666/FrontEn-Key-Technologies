@@ -1,9 +1,9 @@
-function array2Tree(data, pid){
+function array2Tree(arr, pid){
     let res = [];
-    data.forEach(item => {//遍历查找pid对应节点的子节点，放到数组中
+    arr.forEach(item => {//遍历查找pid对应节点的子节点，放到数组中
         if(item.parent === pid){
             res.push(item);
-            let itemChildren = array2Tree(data,item.id);
+            let itemChildren = array2Tree(arr,item.id);
             if(itemChildren.length!=0){
                 item.children = itemChildren;
             } 
