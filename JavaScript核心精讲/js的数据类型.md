@@ -1,6 +1,6 @@
 ## js的数据类型
 基本数据类型：
-Number，String，null，undefined，loolean
+Number，String，null，undefined，boolean
 存储在栈中，先进后出，存储空间有限，不能对变量的生命周期进行管理
 
 引用数据类型
