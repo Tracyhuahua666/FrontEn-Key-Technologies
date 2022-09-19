@@ -35,6 +35,7 @@ f1()
 ```
 Function.prototype._call = function(context) {
     var context = context || window
+    console.log('this:',this)
     // 首先要获取调用call的函数，用this可以获取
     context.tempfn = this;//this指向的是使用call方法的函数(tempfn为临时创建的函数变量，把调用函数赋值到这个临时变量中，最后这个属性是要被删除的)
     args = [...arguments].slice(1)

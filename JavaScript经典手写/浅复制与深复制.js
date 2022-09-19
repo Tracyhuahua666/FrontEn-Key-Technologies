@@ -35,71 +35,43 @@
 //   }
 // }
 
-
-
-// let obj = {
-//   a: undefined,
-//   b: {
-//     c: function () {
-//       console.log(1)
-//     },
-//     d: null,
-//     g: NaN,
-//     i: 'hello',
-//     j: true,
-//     k: undefined,
-//     l: Date(),
-//     m: function sum(a,b){a+b}
-//   },
-//   h: [10, 20, 30, 40]
-// }
-
-// obj.a = obj //添加循环引用
-
-// //测试代码
-// let obj_copy = deepCopy(obj)
-// obj_copy.h.push(5)
-// console.log('obj', obj)
-// console.log('obj_copy', obj_copy)
-
-
-function deepCopy(obj,myMap = new Map()){
-  if(typeof obj !=='object' || obj === null){
-    return obj
-  }
-  if(myMap.get(obj)){
-    return myMap.get(obj)
-  }
-  else{
-    let cloneObj = Array.isArray(obj) ? [] : {}
-    myMap.set(obj,cloneObj)
-    for(let key in obj){
-      cloneObj[key] = deepCopy(obj[key],myMap)
+function deepCopy(obj, map = new Map()) {
+    if (typeof obj !== "object" || obj === null) {
+        return obj
     }
-    return cloneObj
-  }
-  
+    if (map.get(obj)) {
+        return map.get(obj)
+    } else {
+        let result = Array.isArray(obj) ? [] : {}
+        map.set(obj, result)
+        for (let key in obj) {
+            result[key] = deepCopy(obj[key], map)
+        }
+        return result
+    }
 }
+
 let obj = {
-  a: undefined,
-  b: {
-    c: function () {
-      console.log(1)
+    a: undefined,
+    b: {
+        c: function() {
+            console.log(1)
+        },
+        d: null,
+        g: NaN,
+        i: 'hello',
+        j: true,
+        k: undefined,
+        l: Date(),
+        m: function sum(a, b) { a + b }
     },
-    d: null,
-    g: NaN,
-    i: 'hello',
-    j: true,
-    k: undefined,
-    l: Date(),
-    m: function sum(a,b){a+b}
-  },
-  h: [10, 20, 30, 40]
+    h: [10, 20, 30, 40]
 }
+
 obj.a = obj //添加循环引用
 
 //测试代码
 let obj_copy = deepCopy(obj)
-console.log('h:', obj_copy.h.push(50))
-console.log('obj:', obj)
-console.log('obj_copy:', obj_copy)
+obj_copy.h.push(5)
+console.log('obj', obj)
+console.log('obj_copy', obj_copy)

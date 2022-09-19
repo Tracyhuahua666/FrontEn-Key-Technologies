@@ -13,6 +13,6 @@
 display:block
 
 ### 行内块元素
-image input
+image,input,textarea
 宽和高不设置，就由内容决定，也可以设置宽高。
 一行可以出现多个

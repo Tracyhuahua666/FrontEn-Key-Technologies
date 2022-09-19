@@ -29,19 +29,25 @@
 // console.log(result)
 
 // 写法3
-var flatten= function(arr){
+var flatten = function(arr) {
     let result = []
-    function flat(arr){
-        if(Array.isArray(arr)=== false){
+
+    function flat(arr) {
+        if (Array.isArray(arr) === false) {
             result.push(arr)
             return
         }
-        for(let i=0;i<arr.length;++i){
+        for (let i = 0; i < arr.length; ++i) {
             flat(arr[i])
         }
     }
     flat(arr)
     return result
 }
-let arr1=  flatten([[[3,'qqq']],1])
+
+let arr1 = flatten([
+    [
+        [3, 'qqq']
+    ], 1
+])
 console.log(arr1)

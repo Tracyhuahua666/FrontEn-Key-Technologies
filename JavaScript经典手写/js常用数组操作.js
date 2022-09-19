@@ -20,10 +20,18 @@ let arr2_shift_return = arr2.shift()
 console.log('arr2_shift_return:', arr2_shift_return)
 console.log('arr2:', arr2)
 
-// 逆转数组
+//splice 在指定位置添加或删除元素，第一个参数是位置，第二个是删除长度，要是增加元素，第二个写0
+arr2.splice(2, 0, 'f')
+console.log('splice:', arr2)
+    //slice 与splice用法一样，但是不改变原数组
+
+// 逆转数组,会改变原数组
+console.log('arr2:', arr2)
 arr3 = arr2.reverse()
 
-// 字符串逆转: 先拆分成数组，再逆转，再连接
+console.log('arr2.reverse()', arr2)
+console.log('arr3:', arr3)
+    // 字符串逆转: 先拆分成数组，再逆转，再连接
 let str = 'abc'
 console.log(str.split('').reverse().join(''))
 let str2 = 'www.baidu.com'
