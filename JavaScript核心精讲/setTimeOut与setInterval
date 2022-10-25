@@ -1,0 +1,17 @@
+## setTimeout
+
+使用方法：
+TimeoutId = setTimeout(()=>{
+func()
+},time)
+
+在指定时间后，执行一次函数，返回值为 TimeoutID,需要使用 clearTimeout()清除 timeout，否则内存泄漏
+
+## setInterval
+
+使用方法
+intervalId = setInterval(()=>{
+func()
+},time)
+
+每个一段时间，执行一次函数，需要使用 clearInterval() 清除 Interval，否则内存泄漏
